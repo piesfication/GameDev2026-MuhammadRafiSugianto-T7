@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://chhiye1r3mxyd"]
+
+[ext_resource type="PackedScene" uid="uid://bjvvc4yryfqdq" path="res://scenes/player.tscn" id="1_bswci"]
+[ext_resource type="PackedScene" uid="uid://dux70gsmw7ob" path="res://scenes/world_1.tscn" id="2_rus8k"]
+[ext_resource type="PackedScene" uid="uid://dr5yel1x2qhb5" path="res://scenes/area_3d.tscn" id="3_rus8k"]
+
+[node name="Level1" type="Node3D"]
+
+[node name="Player" parent="." instance=ExtResource("1_bswci")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -37.061737)
+
+[node name="World1" parent="." instance=ExtResource("2_rus8k")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.8580217, 0)
+omni_range = 1200.0
+omni_attenuation = 0.0
+
+[node name="Area3D" parent="." instance=ExtResource("3_rus8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.96579, 23.806992)
+sceneName = "win_screen"
+
+[node name="Area3D2" parent="." instance=ExtResource("3_rus8k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -13.303207, -0.058273315)
+sceneName = "level_1"

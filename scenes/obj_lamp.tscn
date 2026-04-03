@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx5pdthn4458d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yfjgu"]
+albedo_color = Color(0.8666667, 0.6666667, 0.8, 1)
+
+[node name="ObjLamp" type="Node3D"]
+
+[node name="Lamp" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Lamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.98349, 0)
+height = 0.4
+cone = true
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Lamp"]
+radius = 0.098
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="Lamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14935303, 0)
+polygon = PackedVector2Array(0, 0, 0, 1, 0.5050049, 0.9838257, 1, 0)
+mode = 1
+spin_degrees = 360.0
+spin_sides = 8
+material = SubResource("StandardMaterial3D_yfjgu")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 5.421
+omni_attenuation = -10.0

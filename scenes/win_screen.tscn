@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://xyvp4fxomu13"]
+
+[ext_resource type="Script" uid="uid://b6oleg8sdn8mx" path="res://win_screen.gd" id="1_erk2x"]
+[ext_resource type="Texture2D" uid="uid://cxkmwk6kovf3" path="res://assets/Keanu.png" id="2_2l6cc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e41g7"]
+font_size = 90
+
+[sub_resource type="LabelSettings" id="LabelSettings_erk2x"]
+font_size = 40
+
+[node name="WinScreen" type="Node2D"]
+script = ExtResource("1_erk2x")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 68.0
+offset_top = 199.0
+offset_right = 1079.0
+offset_bottom = 323.0
+text = "Km menang horeee ^_^"
+label_settings = SubResource("LabelSettings_e41g7")
+
+[node name="img" type="Sprite2D" parent="."]
+position = Vector2(297.99997, 450.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_2l6cc")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 626.0
+offset_top = 388.0
+offset_right = 956.0
+offset_bottom = 501.0
+text = "Klik enter buat balik ke lv 1 yh"
+label_settings = SubResource("LabelSettings_erk2x")
+autowrap_mode = 2
